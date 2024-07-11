@@ -1,0 +1,238 @@
+@font-face {
+  font-family: 'mononoki';
+  src: url('mononoki-Regular.ttf') format('truetype');
+}
+
+/* Reset some basic elements */
+body, h1, p, ul, li, a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* Style for body */
+body {
+  font-family: mononoki, Arial;
+  line-height: 1.6;
+  background-color: #fee3ec;
+  color: #333;
+}
+
+/* Navbar styling */
+nav {
+  background: #f999b7;
+  color: #fffbe4;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 60px; /*adjust*/
+  z-index: 1000;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f2789f;
+}
+
+/*Header*/
+header {
+  position: fixed;
+  background: #f999b7;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.75em;
+  font-weight: bold;
+}
+
+header a, header a:hover, header a:visited {
+  color: #fff;
+}
+
+
+/* Main sections styling */
+section {
+  padding: 100px 20px 1px; /* Added top padding to ensure content is not hidden */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section:nth-of-type(1){
+  padding: 100px 20px 1px;
+}
+
+section:nth-of-type(2) {
+  padding: 50px 20px 1px;
+}
+
+section:last-of-type {
+  padding: 100px 20px 25px
+}
+
+section h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+}
+
+section p, section a {
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+section h2 {
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: -20px 0 -20px 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 120px 10px 40px; /* Increased top padding for smaller screens */
+  }
+}
+
+footer {
+  text-align: center;
+  border-top: 2px solid #f2789f;
+  font-size: 15px;
+  background-color: #f9c5d5;
+}
+
+.project-tile {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+section a, footer a {
+  text-decoration: underline;
+  color: #b34180;
+}
+
+section a:visited, section a:hover, footer a:visited, footer a:hover {
+  color: #822659;
+}
+
+section li {
+  list-style-position: inside;
+}
+/*main page specific styling*/
+#index a {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/*code*/
+/*code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #feeef3;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+code.multiline {
+  padding: 10px 15px; 
+}*/
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5; /* General line height */
+  background-color: #feeef3;
+  padding: 10px 15px; /* General padding */
+  margin: 10px;
+  border-radius: 5px;
+}
+
+img {
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+#qualifications li {
+  font-weight: bold;
+  font-size: 110%;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.footnote-ref,
+.footnote-backref {
+  padding: 0 0.25em;
+  color: #b34180;
+}
+
+.footnotes {
+  color: gray;
+  font-size: smaller;
+  padding: 100px 20px 1px; /* Added top padding to ensure content is not hidden */
+  max-width: 800px;
+  margin: 0 auto;
+}
+.footnotes > hr {
+  border: gray solid 1px;
+  max-width: 800px;
+}
+
+.footnotes ol {
+  list-style-type: decimal;
+  margin-left: 1.5em; /* Optional: Add some left margin for better readability */
+}
+
+.footnotes ol li {
+  margin-bottom: 0.5em; /* Optional: Add some spacing between list items */
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0; /* Adjust margin as needed */
+  text-align: center; /* Center the figcaption text */
+  max-width: 800px;
+}
+
+figure img {
+  width: 100%; /* Ensure the image does not overflow its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+}
+
+figcaption {
+  margin-top: 10px; /* Space between image and caption */
+  font-style: italic; /* Optional: italicize caption */
+  font-size: smaller;
+  color: #71797E;
+}
