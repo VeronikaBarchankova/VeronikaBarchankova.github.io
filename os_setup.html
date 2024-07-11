@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My triple boot OS setup</title>
+    <link href="./styles.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./mikuhehe.png">
+  </head>
+  <body>
+    <header>
+      <a href="./index.html"><h1>Missadora's blog</h1></a> 
+    </header>
+    <nav id="navbar"> 
+      <a href="./index.html" class="nav-link">Index</a>
+      <a href="./blog.html" class="nav-link">About me</a>
+      <a href="#contacts" class="nav-link">Contacts</a> /*make a contacts*/
+    </nav>/*change nav bar to global sites*/
+
+    <section id="page-title">
+      <h2>My triple boot OS setup</h2>
+    </section>
+
+    <section id="specs">
+      <h1>Specifications and basics</h1>
+      <p>Unless stated otherwise, you can presume that anything I talk about has been done on a <a href="https://thinkwiki.de/ThinkPad_Yoga_14">Thinkad Yoga 14</a><sup id=fnref:1><a href="#fn:1" class="footnote-ref">1</a></sup>. I got my hands on it thanks to my partner, as the laptop wasn't being used and he figured I'd appreciate a smaller one since my shoulders hurt from my big laptop.</p>
+      <p>Overall I'm very happy with it, it fits in a tote bag and is easy bring to school without ruining my shoulders and back. It has a touchscreen, which isn't being used often but was quite nice when watching anime and having it flipped upside down. The keyboard is a little too 'squishy' for my liking, but it's not uncomfortable to type on.</p>
+      <p>It also is simply funny to be another ThinkPad Linux user.</p>
+      <p>I'm booting through legacy/BIOS using GRUB. I will get into this later, but I want to remind you that I'm not very versed in this, so forgive any errors I might make.</p>
+      <p>Very simply, since I don't even have enough knowledge to go in depth, in order to run multiple operating systems on the same machine, you need to partition your disk and install different OSs on their own, seperate, partitions. Some operating systems need multiple partitions, like Arch Linux, and some need just one, like Ubuntu. In order to choose which OS you want to get into during booting, you need a boot loader, like GRUB.</p>
+      <img src="./images/partitions.png" alt="a menu with partitions of my disk">
+    </section>
+
+    <section id="windows">
+      <h1>Windows</h1> 
+      <p>Why would I keep Windows if I'm self sufficient with using Linux?</p>
+      <p>My only reason is that sometimes uni requires us to download the most random of softwares, and I presume that a situation will arise where I can only use one of them on Windows.</p>
+      <p>Also, the Windows recovery partition saved me multiple times, which I will get into in a later section.</p>
+    </section>
+
+    <section id="ubuntu">
+      <h1>Ubuntu</h1>
+      <p>I had experiences with Ubuntu when I was smaller, even though I wasn't aware of what Linux or operating systems even are. </p> 
+      <p>A short while after this ThinkPad came into my posession, my partner reccomended I tried Linux. He became a little crazy about it, I suspect because of our mutual friend who has unimaginable amount of knowledge about stuff like this. Anyway, I wasn't interested in it and, honestly, was a little hesitant to make such a change. My reasoning was that I didn't see any use in another operating system. I did feel a little left out though, so I agreed to have it installed, but didn't use it much. I made the switch when I had to do a lot of debugging and found that Linux has awesome tools. I got used to Ubuntu and kept using it out of comfort.</p>
+      <p>The setup was a little confusing to me, as I've never done anything similar, but in retrospective, it's quite easy and simple.</p>
+      <p>Presumably, a default laptop has Windows installed on it. I'm ignoring Mac, because why would you even buy a Mac. You simply <a href="https://consumer.huawei.com/en/support/laptop-user-guide/disk-partition/">split your Windows partition</a> and the unallocated one is going to be your Ubuntu partition.</p>
+      <p>My partner already had a bootable USB ready for me, but it's not difficult to get one prepared. While rebooting your PC you keep pressing F12, Esc or hold Shift from the moment you click Restart on Windows. Then you select the USB as your booting device and go ahead with the on screen instructions. It is advised to choose the "try Ubuntu" option before commiting, to make sure your Wi-Fi and sound work correctly.</p>
+      <p>The installation should prompt you to install GRUB. In order to use your Ubuntu GRUB setup, you should make sure Ubuntu is first in the boot order in your UEFI/BIOS menu. I had Windows first by default so I had to swap them.</p>
+      <p>This should result you in a complete dual boot Ubuntu installation.</p>
+    </section>
+
+    <section id="arch">
+      <h1>Arch Linux</h1>
+      <p>My partner seems to get obessed with random things he finds out about. One of these things has recently been <a href="https://jie-fang.github.io/blog/basics-of-ricing">'ricing'</a>, visual customisation of your desktop enviroment. This has actually interested me, as I find it to be a fun activity to make things look good. I previously made my own IntelliJ theme, which has probably been lost together with my original Windows. I'll get into that in the next section. Arch Linux offers KDE, K Desktop Enviroment for short, which is a lot more cusotmisable than the Gnome enviroment that Ubuntu offers. So when he offered that we could install Arch on my laptop, I actually agreed right away.</p>
+      <img src="./images/arch.png" alt="screenshot of my arch desktop">
+      <p>Arch is different from Ubuntu in the way it works with partitions. You need three partitions: boot, root and swap. So the first step we took was to make those. Then, like Ubuntu, or presumably any other Linux distribution, you need a bootable USB. Similarly to Ubuntu's installation, during reboot, you choose the bootable USB as your booting device and start installation. The installation process of Arch Linux is infamously a little complicated. But the <a href="https://wiki.archlinux.org/">ArchWiki</a> is probably the best documentation for any distro, so it of course offers an <a href="https://wiki.archlinux.org/title/Installation_guide">installation guide</a> you can use to install Arch, step-by-step.</p>
+      <p>The installation doesn't offer a GUI like Ubuntu, but you do everything through command line. I will not go into everything, as I would just be retelling the linked guide, but a shortened version is that you need to format the partitions with the appropriate file systems, mount them to the correct mount points, configure your system, install appropriate packages and create your user.</p>
+      <p>Arch uses UEFI by default, which became a problem later on, as I use legacy/BIOS booting on my laptop. This will be adressed in the troubleshooting section. When you finish installation and reboot into your finished system, it doesn't feel any different from others. Of course, as comes with different distos, using the package manager or setting some stuff up is going to be differet, but this is a given. I messed around with KDE a little bit and find it's customisabiity quite interesting. </p>
+      <p>Arch is a rolling release distro, so the software and drivers in the pacman package manager are quickly up to date, which came in really handy when setting up Neovim. I instantly got the latest version with no further hassle, set up LazyVim and cloned my config repository to the config directory. As was a little evident in the installation process, Arch doesn't come with any packages by default as far as I know, so things you expect to be able to do out of the box with an operating systems isn't possible with Arch, for example screenshotting. But as I said previously, the ArchWiki has documentation on probably everything you will ever need, you just need to find information on it and set it up yourself.</p>
+      <p>For a little while I had to boot into Arch by interrupting the booting and choosing it in the F12 menu.</p>
+      <p>I haven't had a lot of time to get very aquainted with Arch, since this was very recent, but I plan on having fun with KDE and its customisation. As can be seen in my screenshot, I didn't do much but I'm not opposed to make a new blog entry about my Arch setup once I do more As can be seen in my screenshot, I didn't do much but I'm not opposed to make a new blog entry about my Arch setup once I do more.</p>
+    </section>
+    
+    <section id="trouble">
+      <h1>Issues and troubleshooting</h1>
+      <p>A situation that came up with my triple boot has been a little bit of a hassle, but I honestly wasn't very worried throughtout.</p>
+      <p>Basic story is that I was doing something for a project and wanted to reboot into Windows, but when I chose Windows in my GRUB menu, I was found with an error screen and unable to boot into Windows. So I very stupidly went into the BIOS menu and reset the settings, presuming that something got messed up a little bit and that would fix it. Fun fact, by doing this I lost three operating systems at once.</p>
+      <figure>
+        <img src="./images/uefi.png" alt="an uefi menu">
+        <figcaption>ThinkPad UEFI menu. Illustrative, not original. <a href="https://download.lenovo.com/km/media/images/HT509044/Pic1_20190815190932613.png">Image source here.</a></figcaption>
+      </figure>
+      <p>What was left over was the Windows Recovery Enviroment. I have lost Windows once prior, so I figured that I would take the same steps to recover it as I did before. Those didn't work, and further down the line I noticed that the main Windows partition was reformatted to RAW from the default NTFS filesystem. So basically everything on Windows has been lost, but that didn't bother me much, as I haven't used Windows on this laptop in a few months and hardly had anything on it. So I looked up how to format it back to NTFS and installed a clean Windows using a bootable USB with the help of my boyfriend and his very working laptop, unlike mine at the time.</p>
+      <p>Somethere in the middle of the Windows debacle I found Ubuntu completely by chance. Basically, every OS was listed in the F12 prior to this. Now there was only the SSD listed, and since I had nothing to lose, I just tried booting into it like I did with operating systems that were listed there. And voilà, I booted into Ubuntu, which was completely untouched. This took some weight off my chest as I spent a lot of time on my Ubuntu setup and would be sad to lose it.</p>
+      <p>At this point I already had 66% of the original operating systems. Recovering Arch was the biggest issue. I was looking at the partitions and noticed that both Windows and Ubuntu, which were bootable from GRUB, had mount points on Ubuntu. The Arch partitions very much still existed, just in the space-time continuum of my laptop's disk, so through logic, I kind of figured out I had to mount an Arch partition on Ubuntu in order to boot into it.</p>
+      <figure>
+        <img src="./images/grub.jpg" alt="grub menu">
+        <figcaption>GRUB menu. Illustrative, not original. <a href="https://www.omgubuntu.co.uk/wp-content/uploads/2012/09/grub2-in-ubuntu.jpg">Image source here.</a></figcaption>
+      </figure>
+      <p>This was the beggining of a long series of trial and error. Not very surprisingly, my problem was quite unique, so I didn't find much on the internet to help me. That meant I kind of just tried anything that made sense to me at the time. From now on, when referencing boot and root partitions, I, of course, mean Arch partitions. </p>
+      <p>First thing I tried was to mount the root partition on /mnt and the boot partition on /mnt/boot using this:</p>
+      <code>sudo mount /dev/root_partition /mnt
+      sudo mount /dev/boot_partition /mnt/boot</code>
+      <p>However, when running os-prober, which GRUB uses for the update-grub command, from originally finding only Windows, the result wasn't finding both Windows and Arch, but neither. However, after unmounting the boot partition:</p>
+      <code>sudo umount /dev/boot_partition</code>
+      <p>os-prober behaved like I'd expected it to:</p>
+      <code>missadora@megatron:~$ sudo os-prober
+        /dev/sda2@/EFI/Microsoft/Boot/bootmgfw.efi:Windows Boot Manager:Windows:EFI
+        /dev/sda9:Arch Linux:Arch:Linux
+      </code>
+      <p>When running update-grub, Arch was found and seemingly added to the GRUB menu. However, after rebooting, there was no Arch in the GRUB menu and the Arch partitions were unmounted.</p>
+      <p>I found out you need an entry in the fstab file in order for partitions to be permanently mounted on their mount points. You can locate the fstab file in the /etc directory of your root:</p>
+      <code>cd /
+      cd etc
+      sudo nvim fstab
+      </code>
+      <p>An entry in fstab contains six fields, you can read about them in depth <a href="https://linuxconfig.org/how-fstab-works-introduction-to-the-etc-fstab-file-on-linux">here</a>. I made an entry for my root partition, as having my root mounted resulted in a correct os-prober result. On top of that, the changes were permanent even after rebooting and I got an Arch entry in my GRUB menu. Which, unsurprisingly, didn't work.</p>
+      <p>The difference between UEFI and BIOS booting came into play here. During my initial Arch intallation, we mounted the boot partition to /mnt/boot as was reccomended in the ArchWiki installation guide. This however had issues with GRUB and we had to restart the installation process to mount the boot partition to /mnt/boot/efi as was reccomended elsewhere. This helped the initial issue with Arch's GRUB but became an issue later on. While mounting the root partition on Ubuntu, I checked that all needed filed for booting existed there and by all means, it made sense for it to work, but it didn't. Being so close yet so far away to my desired results, I caved in and came to the conclusion to try a bootable USB.</p>
+      <p>Being aware of the root partition being intact, I went through the installation from the start, only ignoring the parts that seemed to be fine. So I didn't reformat the root partition, nor made a new user. My original one still existed. The most important thing that was done differently was that I mounted the boot partition to /mnt/boot instead of /mnt/boot/efi. I booted into Arch and my original still very much existed. So I finally booted into Ubuntu, re-did the mounting, fstab entry, os-prober check, update-grub and rebooted.</p>
+      <p>And there it was, Arch finally found and bootable from my Ubuntu grub config using BIOS/legacy boot.</p>
+    </section>
+
+    <div class="footnotes" role=doc-endnotes>
+      <hr>
+      <ol>
+        <li id=fn:1>
+          <p>For some reason, the only in depth Wiki-like page about the laptop I could find is in German.<a href=#fnref:1 class=footnote-backref>&#8617;&#xfe0e;</a></p>
+        </li>
+        <li>
+          <p>Note to Ash: I stole your footnote code.</p>
+        </li>
+      </ol>
+    </div>
+
+  </body>
+  <footer>
+    <p>Source code and content belongs to me. Font used is <a href="https://madmalik.github.io/mononoki/" target="_blank">mononoki</a>.</p>
+    <p>Based in Bratislava, Slovakia</p>
+  </footer>
+</html>
+
