@@ -85,7 +85,7 @@ function breakTimer() {
   state = true;
   isBreak = true;
 
-  message.innerText = "Break time!.";
+  message.innerText = "Break time!";
 
   let totalSeconds = sessionAmount * 60;
 
