@@ -82,7 +82,7 @@ function reset() {
 function breakTimer() {
   const sessionAmount = 5;
 
-  state = true;
+  state = false;
   isBreak = true;
 
   message.innerText = "Break time!";
@@ -109,6 +109,7 @@ function breakTimer() {
       if (minutesLeft === 0 && secondsLeft === 0) {
         bells.play();
         clearInterval(myInterval);
+        state = true;
         appTimer();
       }
     } else {
