@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My triple boot OS setup</title>
-    <link href="./styles.css" rel="stylesheet">
+    <link id="theme-link" href="./styles.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./mikuhehe.png">
   </head>
   <body>
@@ -14,8 +14,25 @@
     <nav id="navbar"> 
       <a href="./index.html" class="nav-link">Index</a>
       <a href="./blog.html" class="nav-link">About me</a>
-      <a href="#contacts" class="nav-link">Contacts</a> /*make a contacts*/
+      <a href="./blog.html/#contacts" class="nav-link">Contacts</a> 
     </nav>/*change nav bar to global sites*/
+
+    <label for="theme" class="theme">
+      <span class="theme__toggle-wrap">
+        <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+        <span class="theme__icon">
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+        </span>
+      </span>
+    </label>
 
     <section id="page-title">
       <h2>My triple boot OS setup</h2>
@@ -112,6 +129,7 @@
     </div>
 
   </body>
+  <script src="./darkmodearticles.js"></script>
   <footer>
     <p>Source code and content belongs to me. Font used is <a href="https://madmalik.github.io/mononoki/" target="_blank">mononoki</a>.</p>
     <p>Based in Bratislava, Slovakia</p>

@@ -4,18 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Missadora's blog</title>
-    <link href="./bandaid.css" rel="stylesheet">
+    <link id="theme-link" href="./bandaid.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./mikuhehe.png">
+    <style>
+      body.no-transition {
+        visibility: hidden;
+      }
+    </style>
   </head>
-  <body>
+  <body class="no-transition">
     <header>
       <a href="./index.html"><h1>Missadora's blog</h1></a>
     </header>
 
+    <label for="theme" class="theme">
+      <span class="theme__toggle-wrap">
+        <input id="theme" class="theme__toggle" type="checkbox" role="switch" name="theme" value="dark">
+        <span class="theme__icon">
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+        </span>
+      </span>
+    </label>
+
     <nav id="navbar"> 
       <a href="./index.html" class="nav-link">Index</a>
       <a href="./blog.html" class="nav-link">About me</a>
-      <a href="#contacts" class="nav-link">Contacts</a> /*make a contacts*/
+      <a href="#contacts" class="nav-link">Contacts</a> 
     </nav>/*change nav bar to global sites*/
 
     <div class="content-wrapper">
@@ -33,5 +55,6 @@
       <p>Source code and content belongs to me. Font used is <a href="https://madmalik.github.io/mononoki/" target="_blank">mononoki</a>.</p>
       <p>Based in Bratislava, Slovakia</p>
     </footer>
+    <script src="./darkmode.js"></script>
   </body>
 </html>
