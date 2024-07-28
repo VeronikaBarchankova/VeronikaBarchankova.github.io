@@ -1,3 +1,95 @@
+
+:root {
+  --body-bg-light: #fee3ec;
+  --body-text-light: #333;
+  --nav-bg-light: #f999b7;
+  --nav-text-light: #fffbe4;
+  --nav-a-text-light: #333;
+  --nav-a-hover-text-light: #f2789f;
+  --header-bg-light: #f999b7;
+  --header-text-light: #fff;
+  --header-a-all-light: #fff;
+  --section-h1-border-light: #333;
+  --footer-border-light: #f2789f;
+  --footer-bg-light: #f9c5d5;
+  --section-a-light: #b34180;
+  --section-a-all-light: #822659;
+  --code-bg-light: #feeef3;
+  --code-text-light: #333;
+  --footnote-ref-light: #b34180;
+  --footnotes-text-light: gray;
+  --footnotes-hr-border-light: gray;
+  --figcaption-light: #71797E;
+  
+  --body-bg-dark: #5a2d42;
+  --body-text-dark: #f5e0e9;
+  --nav-bg-dark: #8e3e63;
+  --nav-text-dark: #f5e0e9;
+  --nav-a-text-dark: #f5e0e9;
+  --nav-a-hover-text-dark: #d2649a;
+  --header-bg-dark: #8e3e63;
+  --header-text-dark: #f5e0e9;
+  --header-a-all-dark: #f5e0e9;
+  --section-h1-border-dark: #d2649a;
+  --footer-border-dark: #d2649a;
+  --footer-bg-dark: #6d3f56;
+  --section-a-dark: #d2649a;
+  --section-a-all-dark: #e7a9B1;
+  --code-bg-dark: #3d1f2d;
+  --code-text-dark: #f5e0e9;
+  --footnote-ref-dark: #d2649a;
+  --footnotes-text-dark: #f5E0e9;
+  --footnotes-hr-border-dark: #8e3e63;
+  --figcaption-dark: #d2649a;
+}
+
+.light-theme {
+  --body-bg: var(--body-bg-light);
+  --body-text: var(--body-text-light);
+  --nav-bg: var(--nav-bg-light);
+  --nav-text: var(--nav-text-light);
+  --nav-a-text: var(--nav-a-text-light);
+  --nav-a-hover-text: var(--nav-a-hover-text-light);
+  --header-bg: var(--header-bg-light);
+  --header-text: var(--header-text-light);
+  --header-a-all: var(--header-a-all-light);
+  --section-h1-border: var(--section-h1-border-light);
+  --footer-border: var(--footer-border-light);
+  --footer-bg: var(--footer-bg-light);
+  --section-a: var(--section-a-light);
+  --section-a-all: var(--section-a-all-light);
+  --code-bg: var(--code-bg-light);
+  --code-text: var(--code-text-light);
+  --footnote-ref: var(--footnote-ref-light);
+  --footnotes-text: var(--footnotes-text-light);
+  --footnotes-hr-border: var(--footnotes-hr-border-light);
+  --figcaption: var(--figcaption-light);
+}
+
+.dark-theme {
+  --body-bg: var(--body-bg-dark);
+  --body-text: var(--body-text-dark);
+  --nav-bg: var(--nav-bg-dark);
+  --nav-text: var(--nav-text-dark);
+  --nav-a-text: var(--nav-a-text-dark);
+  --nav-a-hover-text: var(--nav-a-hover-text-dark);
+  --header-bg: var(--header-bg-dark);
+  --header-text: var(--header-text-dark);
+  --header-a-all: var(--header-a-all-dark);
+  --section-h1-border: var(--section-h1-border-dark);
+  --footer-border: var(--footer-border-dark);
+  --footer-bg: var(--footer-bg-dark);
+  --section-a: var(--section-a-dark);
+  --section-a-all: var(--section-a-all-dark);
+  --code-bg: var(--code-bg-dark);
+  --code-text: var(--code-text-dark);
+  --footnote-ref: var(--footnote-ref-dark);
+  --footnotes-text: var(--footnotes-text-dark);
+  --footnotes-hr-border: var(--footnotes-hr-border-dark);
+  --figcaption: var(--figcaption-dark);
+}
+
+
 @font-face {
   font-family: 'mononoki';
   src: url('mononoki-Regular.ttf') format('truetype');
@@ -15,8 +107,8 @@ body, h1, p, ul, li, a {
 body {
   font-family: mononoki, Arial;
   line-height: 1.6;
-  background-color: #fee3ec;
-  color: #333;
+  background-color: var(--body-bg);
+  color: var(--body-text);
 }
 
 header, nav, section, footer {
@@ -25,8 +117,8 @@ header, nav, section, footer {
 
 /* Navbar styling */
 nav {
-  background: #f999b7;
-  color: #fffbe4;
+  background: var(--nav-bg);
+  color: var(--nav-text);
   padding: 10px 0;
   position: fixed;
   width: 100%;
@@ -36,7 +128,7 @@ nav {
 }
 
 nav a {
-  color: #fff;
+  color: var(--nav-a-text);
   margin: 0 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -44,14 +136,14 @@ nav a {
 }
 
 nav a:hover {
-  color: #f2789f;
+  color: var(--nav-a-hover-text);
 }
 
 /*Header*/
 header {
   position: fixed;
-  background: #f999b7;
-  color: #fff;
+  background: var(--header-bg);
+  color: var(--header-text);
   padding: 20px 0;
   text-align: center;
   width: 100%;
@@ -65,7 +157,7 @@ header h1 {
 }
 
 header a, header a:hover, header a:visited {
-  color: #fff;
+  color: var(--header-a-all);
 }
 
 
@@ -91,7 +183,7 @@ section:last-of-type {
 section h1 {
   margin-bottom: 20px;
   font-size: 2em;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid var(--section-h1-border);
   padding-bottom: 10px;
 }
 
@@ -120,9 +212,9 @@ section h2 {
 
 footer {
   text-align: center;
-  border-top: 2px solid #f2789f;
+  border-top: 2px solid var(--footer-border);
   font-size: 15px;
-  background-color: #f9c5d5;
+  background-color: var(--footer-bg);
 }
 
 .project-tile {
@@ -132,11 +224,11 @@ footer {
 
 section a, footer a {
   text-decoration: underline;
-  color: #b34180;
+  color: var(--section-a);
 }
 
 section a:visited, section a:hover, footer a:visited, footer a:hover {
-  color: #822659;
+  color: var(--section-a-all);
 }
 
 section li {
@@ -157,10 +249,11 @@ code {
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5; /* General line height */
-  background-color: #feeef3;
+  background-color: var(--code-bg);
   padding: 10px 15px; /* General padding */
   margin: 10px;
   border-radius: 5px;
+  color: var(--code-text);
 }
 
 img {
@@ -178,18 +271,18 @@ img {
 .footnote-ref,
 .footnote-backref {
   padding: 0 0.25em;
-  color: #b34180;
+  color: var(--footnote-ref);
 }
 
 .footnotes {
-  color: gray;
+  color: var(--footnotes-text);
   font-size: smaller;
   padding: 100px 20px 1px; /* Added top padding to ensure content is not hidden */
   max-width: 800px;
   margin: 0 auto;
 }
 .footnotes > hr {
-  border: gray solid 1px;
+  border: var(--footnotes-hr-border) solid 1px;
   max-width: 800px;
 }
 
@@ -221,7 +314,7 @@ figcaption {
   margin-top: 10px; /* Space between image and caption */
   font-style: italic; /* Optional: italicize caption */
   font-size: smaller;
-  color: #71797E;
+  color: var(--figcaption-light);
 }
 /* Default */
 .theme {

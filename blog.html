@@ -6,8 +6,18 @@
     <title>About me</title>
     <link id="theme-link" href="./styles.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./mikuhehe.png">
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+          document.documentElement.classList.add(savedTheme);
+        } else {
+          document.documentElement.classList.add('light-theme');
+        }
+      })();
+    </script>
   </head>
-  <body>
+  <body class="light-theme">
     <header>
       <a href="./index.html"><h1>Missadora's blog</h1></a> 
     </header>
@@ -85,7 +95,7 @@
        </ul>
     </section>
   </body>
-  <script src="./darkmodearticles.js"></script>
+  <script src="./darkmode.js"></script>
   <footer>
     <p>Source code and content belongs to me. Font used is <a href="https://madmalik.github.io/mononoki/" target="_blank">mononoki</a>.</p>
     <p>Based in Bratislava, Slovakia</p>
