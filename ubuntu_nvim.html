@@ -7,14 +7,10 @@
     <link id="theme-link" href="./styles.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./mikuhehe.png">
     <script>
-      (function() {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
           document.documentElement.classList.add(savedTheme);
-        } else {
-          document.documentElement.classList.add('light-theme');
-        }
-      })();
+        };
     </script>
   </head>
   <body class="light-theme">
