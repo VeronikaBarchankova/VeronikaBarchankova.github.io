@@ -1,0 +1,3 @@
+[submodule "keyboard_tester"]
+	path = keyboard_tester
+	url = https://github.com/VeronikaBarchankova/VeronikaBarchankova.github.io.git/keyboard_tester
