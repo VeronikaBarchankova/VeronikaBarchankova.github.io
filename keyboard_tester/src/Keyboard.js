@@ -69,7 +69,7 @@ export default function Keyboard () {
           <div className="col enter" id="Enter">Enter</div>
         </div>
         <div className="row">
-          <div className="col shift" id="Shift">Shift</div>
+          <div className="col shift" id="ShiftLeft">Shift</div>
           <div className="col" id="IntlBackslash"><span>|</span><span>\</span></div>
           <div className="col col-key" id="KeyZ">z</div>
           <div className="col col-key" id="KeyX">x</div>
