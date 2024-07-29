@@ -10,6 +10,7 @@ export default function Tester() {
     const keyCode = e.code === "Space" ? "Space" : e.key;
     setCurrent(keyCode);
     const key = document.getElementById(e.code);
+    console.log(key);
     console.log(e.code);
     if (key === null){
       return;
