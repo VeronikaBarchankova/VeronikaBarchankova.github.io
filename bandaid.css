@@ -170,7 +170,7 @@ header a, header a:hover, header a:visited {
 
 /* Main sections styling */
 section {
-  padding: 100px 20px 1px; /* Added top padding to ensure content is not hidden */
+  padding: 150px 20px 1px; /* Added top padding to ensure content is not hidden */
   max-width: 800px;
   margin: 0 auto;
   background-color: transparent;
@@ -178,6 +178,7 @@ section {
 
 section:nth-of-type(1){
   padding: 200px 20px 1px;
+  margin-top: 25px;
 }
 
 section:nth-of-type(2) {
