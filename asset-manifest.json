@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/VeronikaBarchankova/VeronikaBarchankova.github.io/tree/main/keyboard_tester/static/css/main.13420732.css",
-    "main.js": "/VeronikaBarchankova/VeronikaBarchankova.github.io/tree/main/keyboard_tester/static/js/main.6264e360.js",
-    "static/js/453.1cfcf1fe.chunk.js": "/VeronikaBarchankova/VeronikaBarchankova.github.io/tree/main/keyboard_tester/static/js/453.1cfcf1fe.chunk.js",
-    "index.html": "/VeronikaBarchankova/VeronikaBarchankova.github.io/tree/main/keyboard_tester/index.html",
-    "main.13420732.css.map": "/VeronikaBarchankova/VeronikaBarchankova.github.io/tree/main/keyboard_tester/static/css/main.13420732.css.map",
-    "main.6264e360.js.map": "/VeronikaBarchankova/VeronikaBarchankova.github.io/tree/main/keyboard_tester/static/js/main.6264e360.js.map",
-    "453.1cfcf1fe.chunk.js.map": "/VeronikaBarchankova/VeronikaBarchankova.github.io/tree/main/keyboard_tester/static/js/453.1cfcf1fe.chunk.js.map"
+    "main.css": "/keyboard_tester/build/static/css/main.13420732.css",
+    "main.js": "/keyboard_tester/build/static/js/main.414f1fa1.js",
+    "static/js/453.1cfcf1fe.chunk.js": "/keyboard_tester/build/static/js/453.1cfcf1fe.chunk.js",
+    "index.html": "/keyboard_tester/build/index.html",
+    "main.13420732.css.map": "/keyboard_tester/build/static/css/main.13420732.css.map",
+    "main.414f1fa1.js.map": "/keyboard_tester/build/static/js/main.414f1fa1.js.map",
+    "453.1cfcf1fe.chunk.js.map": "/keyboard_tester/build/static/js/453.1cfcf1fe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.13420732.css",
-    "static/js/main.6264e360.js"
+    "static/js/main.414f1fa1.js"
   ]
 }
