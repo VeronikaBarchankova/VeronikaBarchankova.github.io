@@ -94,6 +94,96 @@
   font-family: 'mononoki';
   src: url('mononoki-Regular.ttf') format('truetype');
 }
+:root {
+  --body-bg-light: #fee3ec;
+  --body-text-light: #333;
+  --nav-bg-light: #f999b7;
+  --nav-text-light: #fffbe4;
+  --nav-a-text-light: #333;
+  --nav-a-hover-text-light: #f2789f;
+  --header-bg-light: #f999b7;
+  --header-text-light: #fff;
+  --header-a-all-light: #fff;
+  --section-h1-border-light: #333;
+  --footer-border-light: #f2789f;
+  --footer-bg-light: #f9c5d5;
+  --section-a-light: #b34180;
+  --section-a-all-light: #822659;
+  --code-bg-light: #feeef3;
+  --code-text-light: #333;
+  --footnote-ref-light: #b34180;
+  --footnotes-text-light: gray;
+  --footnotes-hr-border-light: gray;
+  --figcaption-light: #71797E;
+  
+  --body-bg-dark: #5a2d42;
+  --body-text-dark: #f5e0e9;
+  --nav-bg-dark: #8e3e63;
+  --nav-text-dark: #f5e0e9;
+  --nav-a-text-dark: #f5e0e9;
+  --nav-a-hover-text-dark: #d2649a;
+  --header-bg-dark: #8e3e63;
+  --header-text-dark: #f5e0e9;
+  --header-a-all-dark: #f5e0e9;
+  --section-h1-border-dark: #d2649a;
+  --footer-border-dark: #d2649a;
+  --footer-bg-dark: #6d3f56;
+  --section-a-dark: #d2649a;
+  --section-a-all-dark: #e7a9B1;
+  --code-bg-dark: #3d1f2d;
+  --code-text-dark: #f5e0e9;
+  --footnote-ref-dark: #d2649a;
+  --footnotes-text-dark: #f5E0e9;
+  --footnotes-hr-border-dark: #8e3e63;
+  --figcaption-dark: #d2649a;
+}
+
+.light-theme {
+  --body-bg: var(--body-bg-light);
+  --body-text: var(--body-text-light);
+  --nav-bg: var(--nav-bg-light);
+  --nav-text: var(--nav-text-light);
+  --nav-a-text: var(--nav-a-text-light);
+  --nav-a-hover-text: var(--nav-a-hover-text-light);
+  --header-bg: var(--header-bg-light);
+  --header-text: var(--header-text-light);
+  --header-a-all: var(--header-a-all-light);
+  --section-h1-border: var(--section-h1-border-light);
+  --footer-border: var(--footer-border-light);
+  --footer-bg: var(--footer-bg-light);
+  --section-a: var(--section-a-light);
+  --section-a-all: var(--section-a-all-light);
+  --code-bg: var(--code-bg-light);
+  --code-text: var(--code-text-light);
+  --footnote-ref: var(--footnote-ref-light);
+  --footnotes-text: var(--footnotes-text-light);
+  --footnotes-hr-border: var(--footnotes-hr-border-light);
+  --figcaption: var(--figcaption-light);
+}
+
+.dark-theme {
+  --body-bg: var(--body-bg-dark);
+  --body-text: var(--body-text-dark);
+  --nav-bg: var(--nav-bg-dark);
+  --nav-text: var(--nav-text-dark);
+  --nav-a-text: var(--nav-a-text-dark);
+  --nav-a-hover-text: var(--nav-a-hover-text-dark);
+  --header-bg: var(--header-bg-dark);
+  --header-text: var(--header-text-dark);
+  --header-a-all: var(--header-a-all-dark);
+  --section-h1-border: var(--section-h1-border-dark);
+  --footer-border: var(--footer-border-dark);
+  --footer-bg: var(--footer-bg-dark);
+  --section-a: var(--section-a-dark);
+  --section-a-all: var(--section-a-all-dark);
+  --code-bg: var(--code-bg-dark);
+  --code-text: var(--code-text-dark);
+  --footnote-ref: var(--footnote-ref-dark);
+  --footnotes-text: var(--footnotes-text-dark);
+  --footnotes-hr-border: var(--footnotes-hr-border-dark);
+  --figcaption: var(--figcaption-dark);
+}
+
 
 /* Reset some basic elements */
 body, h1, p, ul, li, a {
