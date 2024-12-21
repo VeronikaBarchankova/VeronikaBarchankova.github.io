@@ -92,7 +92,7 @@
     </section>
 
     <section>
-      <h2>Functional preview</h2>
+      <h1>Functional preview</h1>
       <p>The only thing keeping me from switching straight to Typst was that I was missing a preview like I had with LaTeX on Overleaf. I tried looking for something but the only plugin I found used a web browser for the preview and I didn't like that. Then I came across <a href="https://www.dogeystamp.com/index.html" target="_blank">DogeyStamp's</a> blog post about his setup and I instantly fell in love with it. I have reached out to him to ask for permission to write about how I used his tips, so I'd like to thank him one more time for this chance. This full blog post about Typst can be found <a href="https://www.dogeystamp.com/typst-notes/" target="_blank">here</a>.</p>
       <p>Since his script is written in Vimscript, as far as I'm aware, and I run LazyVim which uses Lua, I had to convert his setup to work with mine. I also edited it a little according to my personal preferences. I found the window for compiler errors very useful but as I would already have half my screen taken up by the PDF, a vertical window left not much space for my actual Typst code. I made it so that the window that opens for me is horizontally below my code and my cursor also automatically goes back to the code and doesn't stay within the compiling messages. I also pefered different bindings, specifically Ctrl+R for watching and Ctrl+O for opening the PDF. O stood for "open" but I honestly forgot what R was supposed to stand for. From DogeyStamp's code: </p>
       <code>function TypstWatch()
@@ -125,7 +125,7 @@
     </section>
 
     <section>
-      <h2>Final touches to Arch</h2>
+      <h1>Final touches to Arch</h1>
       <p>Some things for me, of course, needed a more workaround or complicated way of setting up compared to Ubuntu. My issues with typing on Arch was that the y and p commands didn't copy and paste to and from the system clipboard. When running :checkhealth, a clipboard tool was found, I had already installed xclip since I utilise it the terminal when copying large files. I am running Wayland on KDE, and found out that I needed a different clipboard tool. I chose wl-clipboard and it instantly fixed this issue.</p>
       <code>sudo pacman -S wl-clipboard</code>
       <p>My last issue was that I was facing that remapping my keyboard seemed impossible. I am a weird person who uses the Slovak keyboard layout my entire life and I simply cannot code on another layout. However, there are minor differences between systems for this layout. I tried basically every way of editing my keymap but it either didn't work for my system or didn't fulfill my needs, as I needed to remap a combination of keys and not just a simple event. I found <a href="https://github.com/sezanzeb/input-remapper" target="_blank">Input Remapper</a>, a GUI tool which suited all my needs. It's available for download through yay, which I didn't yet have, so I used <a href="https://itsfoss.com/install-yay-arch-linux/" target="_blank">this</a> tutorial. Afterwards, the download was simple, through the commands listed in their GitHub repo:</p>
