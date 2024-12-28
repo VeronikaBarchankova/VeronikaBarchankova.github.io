@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hyprland and ricing</title>
+    <link id="theme-link" href="./styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="./mikuhehe.png" />
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.classList.add(savedTheme);
+      }
+    </script>
+  </head>
+  <body class="light-theme">
+    <header>
+      <a href="./index.html"><h1>Missadora's blog</h1></a>
+    </header>
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="navbar">
+      <a href="./index.html" class="nav-link">Index</a>
+      <a href="./blog.html" class="nav-link">About me</a>
+      <a href="./contacts.html" class="nav-link">Contacts</a>
+    </nav>
+
+    <label for="theme" class="theme">
+      <span class="theme__toggle-wrap">
+        <input
+          id="theme"
+          class="theme__toggle"
+          type="checkbox"
+          role="switch"
+          name="theme"
+          value="dark"
+        />
+        <span class="theme__icon">
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+          <span class="theme__icon-part"></span>
+        </span>
+      </span>
+    </label>
+
+    <section id="page-title">
+      <h2>Hyprland and ricing</h2>
+    </section>
+
+    <section id="getting-started">
+      <h1>Getting started</h1>
+      <p>
+        The main reason I had started using Arch Linux in the first place is the
+        amount of customizability that distros which mainly use Gnome don't
+        offer. I had gotten it mainly to try ricing, which took me about half a
+        year to get to with all my university responsibilities and my lack of
+        motivation. I had an idea that I wanted to make a pretty Catppuccin
+        themed rice for a little while and after browsing r/UnixPorn and seeing
+        <a
+          href="https://www.reddit.com/r/unixporn/comments/1h3xnao/hyprland_comfy_catppucin_rice_for_uni/"
+          target="_blank"
+          >this post</a
+        >, I started trying to make my own.
+      </p>
+    </section>
+
+    <section id="setting-up">
+      <h1>Hyprland</h1>
+      <p>
+        What is <a href="https://hyprland.org/" target="_blank">Hyprland</a>? I
+        hadn't the slightest idea but seeing that most posts on the
+        aforementioned subreddit used Hyprland as their desktop enviroment, I
+        wanted to do the same. To quote it's GitHub and save myself some
+        brainpower trying to think of an explanation, "Hyprland is an
+        independent, highly customizable, dynamic tiling Wayland compositor that
+        doesn't sacrifice on its looks." It is a tiling window manager, which
+        splits up your screen into tiles by default, as opposed to a floating
+        window manager, which everyone is accustomed to, through Windows, MacOS,
+        Gnome, KDE Plasma and such. This difference, as well as different
+        controls through keybinds instead of using icons, takes a little to get
+        used to but I haven't had issues for more than three days or so.
+      </p>
+      <img src="./images/hyprland2.png" />
+      <p>
+        When I set my mind on using Hyprland, I was a little scared to commit to
+        it fully before trying it out, because of my paranoia that Arch will
+        break even if I look at it the wrong way. Thankfully, it's incredibly
+        easy to test. You simply download Hyprland using yay for the newest
+        version:
+      </p>
+      <code> yay -S hyprland-git </code>
+      <p>
+        Load into a different TTY using Ctrl+Alt+F2 (or F3 and so on...) and
+        execute the hyprland command. You'll load a Hyprland session, while
+        having your original session available on TTY1, and can try configuring
+        anything you'd like without being scared of messing something up and
+        being stuck. Well at least I had that fear.
+      </p>
+    </section>
+
+    <section>
+      <h1>Utilities</h1>
+      <p>
+        A downside of Hyprland is that is is not very usable out of the box as
+        opposed to KDE, but doing everything yourself is one of the wonders of
+        Linux. An upside of Hyprland is that many of the programs you will use
+        only need a .conf file to customize anything you need.
+      </p>
+
+      <h3>Terminal</h3>
+      <p>
+        Arguably the most important part when using Linux. I've tried a few
+        terminals on both Ubuntu Gnome and Arch KDE Plasma, however I've stayed
+        with the default terminal on Hyprland, which is Kitty, for its
+        simplicity and minimalist looks without any bars or buttons. Kitty's
+        configuration file isn't in the hypr directory within the .config/
+        direcory within your user, but in its own one.
+      </p>
+
+      <h3>Wallpaper</h3>
+      <p>
+        The most used wallpaper utility on Hyprland is
+        <a href="https://github.com/hyprwm/hyprpaper" target="_blank"
+          >Hyprpaper</a
+        >. I have chosen a nice looking wallpaper from
+        <a
+          href=" https://github.com/orangci/walls-catppuccin-mocha"
+          target="_blank"
+          >this GitHub repo</a
+        >
+        which hosts tons of Catppuccin themed wallpapers. Only thing I needed to
+        do to set the wallpaper is write two lines in a .conf file and autoload
+        Hyprpaper on startup.
+      </p>
+
+      <h3>Taskbar</h3>
+      <p>
+        There is no taskbar by default and you have to download one yourself.
+        One that is used the most is
+        <a href="https://github.com/Alexays/Waybar" target="_blank">Waybar</a>
+        but it's very basic and seemed like it'd need a lot of work to transform
+        into something good looking. The Reddit post which inspired me
+        referenced
+        <a href="https://hyprpanel.com/" target="_blank">Hyprpanel</a>, which
+        provides a lot of visually appealing utilities out of the box, although
+        at the cost of a lot of dependencies. It runs through AGSv1 at the
+        moment, but as far as I'm aware, the developers are looking to migrate
+        to a newer version of AGS.
+      </p>
+
+      <h3>Screenshotting</h3>
+      <p>
+        I'm using
+        <a href="https://github.com/Gustash/Hyprshot" target="_blank"></a
+        >Hyprshot with two keybindings, one for a screen selection and one for
+        full screen.
+      </p>
+    </section>
+
+    <section>
+      <h1>Theming and configuration</h1>
+      <p>
+        As I've mentioned, my goal was to get as Catppuccined as possible, which
+        is easy to achieve with their incredible
+        <a href="https://catppuccin.com/ports" target="_blank"
+          >catalogue of ports</a
+        >.
+      </p>
+      <p>This is everywhere I used any kind of Catppuccin theming:</p>
+      <ul>
+        <li><a href="https://github.com/catppuccin/kitty">Kitty</a></li>
+        <li><a href="https://github.com/catppuccin/firefox">Firefox</a></li>
+        <li>
+          <a href="https://github.com/catppuccin/discord"
+            >Discord/BetterDiscord</a
+          >
+          (requires upkeep after each Discord update)
+        </li>
+        <li><a href="https://github.com/catppuccin/obsidian">Obsidian</a></li>
+        <li>
+          <a href="https://github.com/catppuccin/spicetify">Spicetify</a>
+          (requires upkeep after each Spotify update)
+        </li>
+        <li>
+          <a href="https://github.com/quantumfate/wofi">Wofi</a> (note: I
+          haven't really figured out how to do it properly, so I use a
+          workaround in the way I load my menu in hyprland.conf)
+        </li>
+        <li>
+          <a href="https://github.com/catppuccin/nvim">Neovim</a> (this is the
+          only one I've been using for a long time beforehand)
+        </li>
+        <li><a href="https://github.com/catppuccin/cava">Cava</a></li>
+      </ul>
+
+      <p></p>
+      <p>
+        As for configurations, I've shared my dotfiles in
+        <a href="https://github.com/missadoramegatron/dotfiles" target="_blank"
+          >this GitHub repo</a
+        >. If you simply clone them, they probably won't work, as some need to
+        be in their own directory (like Kitty) or include paths that are
+        relevant to only my system. I'm sharing those I have personally edited
+        to my own liking, when it comes to themes, you can find everything you
+        need to know in their own respective repos through the Catppuccin port
+        catalogue or in through the above links
+      </p>
+      <p>
+        Some of the changes I've made to my hyprland.conf is new keybinds to
+        switch workspaces and move windows through workspaces, scroll through
+        workspaces using keybinds, screenshotting, window border colours,
+        startup applications, and so on.
+      </p>
+      <img src="./images/hyprland1.png" />
+    </section>
+
+    <section>
+      <h1>Future improvements</h1>
+      <p>
+        Currently, I don't lock whenever I sleep my laptop on Hyprland. I plan
+        to use Hypridle to watch for when I'm idle and execute Hyprlock to lock
+        me out. I'm also having issues with logging into the Eduroam Wi-Fi since
+        the Hyprpanel Wi-Fi utility only allows for the password input and
+        Eduroam needs both username and password. Currently I use:
+      </p>
+      <code
+        >nmcli dev wifi list sudo <br />nmcli dev --ask wifi connect [SSID found from previous command]
+      </code>
+      <p>
+        It's simple to write a script to automate this, but I've been too lazy.
+      </p>
+    </section>
+
+    <section>
+      <h1>Conclusion</h1>
+      <p>
+        Overall this was an extremely pleasurable experience. I found it very
+        fun to figure everything out and customize everything to my own liking.
+        This is the most customization I've seen from a desktop enviroment so I
+        highly reccomend this to anyone who is interested in ricing.
+      </p>
+    </section>
+  </body>
+  <script src="./darkmode.js"></script>
+  <script src="./dropdown.js"></script>
+  <footer>
+    <p>
+      Source code and content belongs to me. Font used is
+      <a href="https://madmalik.github.io/mononoki/" target="_blank"
+        >mononoki</a
+      >
+    </p>
+    <p>Based in Bratislava, Slovakia</p>
+  </footer>
+</html>
